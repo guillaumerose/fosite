@@ -3,7 +3,7 @@ package compose
 import (
 	"crypto/rsa"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 	"github.com/ory-am/fosite"
 	"github.com/ory-am/fosite/hash"
 )

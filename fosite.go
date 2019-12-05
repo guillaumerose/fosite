@@ -3,7 +3,7 @@ package fosite
 import (
 	"reflect"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 	"github.com/ory-am/fosite/hash"
 )
 

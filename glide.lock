@@ -27,8 +27,8 @@ imports:
   version: c55201b036063326c5b1b89ccfe45a184973d073
 - name: github.com/pkg/errors
   version: a22138067af1c4942683050411a841ade67fe1eb
-- name: github.com/Sirupsen/logrus
-  version: a283a10442df8dc09befd873fab202bf8a253d6a
+- name: github.com/sirupsen/logrus
+  version: 67a7fdcf741f4d5cee82cb9800994ccfd4393ad0
 - name: golang.org/x/crypto
   version: e0d166c33c321d0ff863f459a5882096e334f508
   subpackages:
