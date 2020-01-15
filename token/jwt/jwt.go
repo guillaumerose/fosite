@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/pkg/errors"
 	"github.com/dgrijalva/jwt-go"
+	"github.com/pkg/errors"
 )
 
 // Enigma is responsible for generating and validating challenges.
@@ -24,7 +24,7 @@ func (j *RS256JWTStrategy) Generate(claims Mapper, header Mapper) (string, strin
 	}
 
 	token := jwt.New(jwt.SigningMethodRS256)
-	token.Claims = claims.ToMap()
+	token.Claims = jwt.MapClaims(claims.ToMap())
 	token.Header = assign(token.Header, header.ToMap())
 
 	var sig, sstr string

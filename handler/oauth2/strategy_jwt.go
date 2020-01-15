@@ -3,6 +3,7 @@ package oauth2
 import (
 	"strings"
 
+	jwtgo "github.com/dgrijalva/jwt-go"
 	"github.com/ory-am/fosite"
 	"github.com/ory-am/fosite/token/jwt"
 	"github.com/pkg/errors"
@@ -65,7 +66,7 @@ func (h *RS256JWTStrategy) validate(token string) error {
 		return err
 	}
 
-	claims := jwt.JWTClaimsFromMap(t.Claims)
+	claims := jwt.JWTClaimsFromMap(t.Claims.(jwtgo.MapClaims))
 	if claims.IsNotYetValid() || claims.IsExpired() {
 		return errors.New("Token claims did not validate")
 	}
